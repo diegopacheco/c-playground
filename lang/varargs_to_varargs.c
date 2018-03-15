@@ -3,7 +3,12 @@
 #include <string.h>
 #include <stdarg.h>
 
+#define varargs_to_varargs_2(...) fprintf(stdout, __VA_ARGS__)
+
 void varargs_to_varargs(int argc,va_list varargs){
+
+  varargs_to_varargs_2("OOOOOOOOOOK");
+
   for(int i=0; i<= argc-1; i++){
     char *buf = va_arg(varargs, char *);
     printf("I got varargs!!! Arg %d %s \n",i,buf);
