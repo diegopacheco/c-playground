@@ -3,6 +3,11 @@
 #include <string.h>
 #include <stdarg.h>
 
+//
+// More on...
+// https://www.eskimo.com/~scs/cclass/int/sx11b.html
+//
+
 void myprintf(const char *fmt, ...){
   va_list argp;
   va_start(argp, fmt);
