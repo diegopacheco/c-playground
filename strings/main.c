@@ -8,6 +8,12 @@ int main () {
    char buffer[10] = {0};
    string_ref(&buffer);
    printf("String buffer is: [%s]\n", buffer);
+
+   char *buf = "ok";
+   size_t length = 0;
+   getline(&buf, &length, stdin);
+   string_modify(&buf);
+   printf("modified buffer is: [%s]\n", buf);
    return 0;
 }
 
@@ -34,4 +40,15 @@ void string_ref(char *buf){
     buf[0] = 'O';
     buf[1] = 'K';
     buf[2] = '\0';
+}
+
+void string_modify(char **buf){
+    // get the real size
+    size_t size = strlen(*buf) -1;          
+    printf("size: %d\n", size);
+
+    *buf = realloc(*buf, size + 3);
+	*(*buf + size + 0) = '!';
+	*(*buf + size + 1) = '!';
+	*(*buf + size + 2) = 0;
 }

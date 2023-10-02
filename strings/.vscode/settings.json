@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.julia": "julia",
+        "string_view": "c",
+        "__locale": "c",
+        "__string": "c",
+        "string": "c"
+    }
+}
