@@ -5,7 +5,7 @@ int main () {
    string_create();
    string_copy();
    
-   static char buffer[10] = {0};
+   char buffer[10] = {0};
    string_ref(&buffer);
    printf("String buffer is: [%s]\n", buffer);
    return 0;
@@ -30,8 +30,8 @@ void string_copy(){
     printf("%s", result);
 }
 
-void string_ref(char *buf[]){
-    *buf[0] = 'O';
-    *buf[1] = 'K';
-    *buf[2] = '\0';
+void string_ref(char *buf){
+    buf[0] = 'O';
+    buf[1] = 'K';
+    buf[2] = '\0';
 }
