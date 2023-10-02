@@ -1,4 +1,4 @@
 #!/bin/bash
 
-makdir target
+mkdir target | echo "target already exists, ignoring."
 gcc main.c -o target/main
