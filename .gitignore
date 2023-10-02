@@ -2,6 +2,7 @@
 *.d
 
 target/main
+target/ 
 
 # Object files
 *.o
