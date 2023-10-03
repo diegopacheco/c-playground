@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// 64 bits, or larger
 unsigned long long int factorial(unsigned int i){
     if (i<=1){
         return 1;
