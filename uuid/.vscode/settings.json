@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.julia": "julia",
+        "stdlib.h": "c"
+    }
+}
